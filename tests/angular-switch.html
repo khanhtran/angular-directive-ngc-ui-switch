@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="TestApp">
+    <head>
+        <meta charset="utf-8">
+        <title>UI Tests</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../dist/ngc-ui-switch.css">
+
+        <style type="text/css">
+        </style>
+
+        <script>
+            function now() {
+                var date = new Date();
+                return '[' + [date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()].join('-') + '] ';
+            }
+        </script>
+
+        <script src="../libs/angular.js"></script>
+        
+        <script src="../dist/ngc-ui-switch.js"></script>
+        <script src="test.js"></script>
+    </head>
+
+    <body ng-controller="TestController" style="margin: 20px;">
+        <h3>Switches</h3>
+
+        <h4>Master</h4>
+        <p>Last event: {{ master.last }}</p>
+        <p>Model: {{ master.on }}</p>
+        <ngc-ui-switch
+             ng-model="master.on">
+        </ngc-ui-switch>
+
+        <h4>Slave</h4>
+        <p>Model: {{ slave.on }}</p>
+        <span ngc-ui-switch
+             ng-model="slave.on"
+             switch-disabled="!master.on">
+        </span>
+    </body>
+</html>

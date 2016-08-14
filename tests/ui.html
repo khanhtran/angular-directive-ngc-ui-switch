@@ -1,0 +1,88 @@
+<style>
+
+    #page-ui p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+</style>
+
+<div id="page-ui" ng-controller="UiController">
+
+    <h3>Buttons</h3>
+
+    <p>
+        <button>Default</button>&nbsp;&nbsp;
+        <input type="button" class="white" value="White"/>&nbsp;&nbsp;
+        <input type="reset" class="red" value="Red"/>
+    </p>
+
+    <p>
+        <input type="submit" class="blue" value="Blue"/>&nbsp;&nbsp;
+        <span class="button yellow refresh">Yellow</span>&nbsp;&nbsp;
+        <button class="green">Green</button>
+    </p>
+
+    <p>
+        <button class="medium refresh">Medium</button>&nbsp;&nbsp;
+        <button class="blue medium refresh">Blue medium</button>
+    </p>
+
+    <p>
+        <button class="fill refresh">Fill</button><br />
+        <button class="red fill">Red fill</button>
+    </p>
+
+    <h3>Switches</h3>
+
+    <p>{{ event }}</p>
+
+    <p>
+        <input type="checkbox"
+
+
+               name="switch1"
+
+               ng-model="switch1.model"
+               ng-true-value="yes"
+               ng-false-value="no"
+
+               ng-click="switch1.onClick($event)"
+
+               ngc-ui-switch />
+    </p>
+
+
+    <!--xng-click="switch1.onClick($event)"
+    xng-swipe-left="switch1.onSwipeLeft($event)"
+    xng-swipe-right="switch1.onSwipeRight($event)"
+    xid="{{switch1.id}}"-->
+
+    <!--<p>devicePixelRatio: {{ window.devicePixelRatio }}</p>
+
+
+
+
+    <p>iphone: {{ Modernizr.iphone }}</p>
+    <p>ipad: {{ Modernizr.ipad }}</p>
+    <p>ipod: {{ Modernizr.ipod }}</p>
+    <p>ios: {{ Modernizr.ios }}</p>
+    <p>ios5: {{ Modernizr.ios5 }}</p>
+    <p>ios6: {{ Modernizr.ios6 }}</p>
+
+    <p>android: {{ Modernizr.android }}</p>
+    <p>android2: {{ Modernizr.android2 }}</p>
+    <p>android3: {{ Modernizr.android3 }}</p>
+    <p>android4: {{ Modernizr.android4 }}</p>
+
+    <p>webkit: {{ Modernizr.webkit }}</p>
+    <p>chrome: {{ Modernizr.chrome }}</p>
+    <p>safari: {{ Modernizr.safari }}</p>
+    <p>androidbrowser: {{ Modernizr.androidbrowser }}</p>
+
+    <p>{{ navigator.platform }}</p>
+    <p>{{ navigator.vendor }}</p>
+    <p>{{ navigator.product }}</p>
+    <p>{{ navigator.userAgent }}</p>-->
+
+</div>

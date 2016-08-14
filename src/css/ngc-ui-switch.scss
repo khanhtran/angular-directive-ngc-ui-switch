@@ -1,0 +1,45 @@
+/**
+ * $PROJECT_NAME$
+ * $PROJECT_HOMEPAGE$
+ *
+ * @version $PROJECT_VERSION$
+ * @license $PROJECT_LICENSE$
+ */
+
+.ngc-ui-switch-base {
+    $img-path: 'img/';
+    $highlight-color: rgba(0, 0, 0, 0) !important;
+
+    display: inline-block;
+    overflow: hidden;
+    height: 30px;
+    width: 76px;
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: $highlight-color;
+    -moz-tap-highlight-color: $highlight-color;
+    -ms-tap-highlight-color: $highlight-color;
+    -o-tap-highlight-color: $highlight-color;
+    tap-highlight-color: $highlight-color;
+
+    &.ngc-ui-switch-on, &.ngc-ui-switch-off {
+        background-image: url($img-path + 'ngc-ui-switch-sprites.png');
+        background-size: 100%;
+    }
+
+    &.ngc-ui-switch-on {
+        background-position: 0 0;
+
+        &.ngc-ui-switch-disabled {
+            background-position: 0 -80px;
+        }
+    }
+
+    &.ngc-ui-switch-off {
+        background-position: 0 -40px;
+
+        &.ngc-ui-switch-disabled {
+            background-position: 0 -120px;
+        }
+    }
+}
